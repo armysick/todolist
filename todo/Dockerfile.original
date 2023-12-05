@@ -1,0 +1,16 @@
+FROM python:3.9-slim
+
+ENV PYTHONUNBUFFERED=1
+
+RUN mkdir /blip-todo
+
+WORKDIR /blip-todo
+
+ADD . /blip-todo/
+
+COPY requirements.txt requirements.txt
+
+RUN touch .env
+
+RUN pip install -r requirements.txt
+

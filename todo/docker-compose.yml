@@ -1,0 +1,11 @@
+version: '3.3'
+
+services:
+  web:
+    build: .
+    command: bash -c "cd ./todo_list && python manage.py makemigrations && python manage.py migrate && python manage.py collectstatic --noinput && python manage.py runserver 0.0.0.0:8000"
+    container_name: blip-todo
+    volumes:
+      - .:/blip-todo
+    ports:
+      - "425:8000"
