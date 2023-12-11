@@ -53,8 +53,7 @@ MIDDLEWARE = [
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://todo.secsy.qa.internal',
-    'https://todo.secsy.prd.internal',
+    'https://todo.armysi.cc',
 ]
 
 ROOT_URLCONF = 'todo_list.urls'
